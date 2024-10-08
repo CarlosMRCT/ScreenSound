@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@inject NavigationManager navigation
+
+@code {
+
+	protected override void OnInitialized()
+	{
+		navigation.NavigateToLogin($"/login?ReturnUrl={Uri.EscapeDataString(navigation.Uri)}");
+	
+	}
+
+}
